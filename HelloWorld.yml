@@ -1,8 +1,9 @@
 ---
-- name: Hello World!
+- name: Hello World Playbook
   hosts: all
- 
+  gather_facts: false
+
   tasks:
- 
-  - name: Hello World!
-    shell: echo "Hi! Tower is working."
+    - name: Print Hello World
+      ansible.builtin.debug:
+        msg: "Hello World"
